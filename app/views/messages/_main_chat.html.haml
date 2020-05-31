@@ -1,0 +1,40 @@
+.main-chat
+   .group-info
+      .group-info__box
+         %h2.group-info__box__group-name
+            test
+         %ul.group-info__box__member
+            Member :
+            %li.group-info__box__member__name
+               masa
+            %li.group-info__box__member__name
+               aaaa
+      = link_to "#", class: "group-info__edit" do
+         Edit
+
+   .message-list
+      .message
+         .message__user
+            %p.message__user__name
+               masa
+            %p.message__user__data
+               2019/11/20(Wed) 17:43:01
+         %p.messasge__text
+            おはよう！
+      .message
+         .message__user
+            %p.message__user__name
+               aaaa
+            %p.message__user__data
+               2019/11/20(Wed) 18:50:01
+         %p.message__text
+            こんばんわ！
+
+   .chat-form
+      %form.new-message
+         .input-box
+            %input{ type: "text", class: "input-box__text", placeholder: "type a message"}
+            %label{ class: "input-box__image"}
+               %i.fa.fa-image
+               %input{ type: "file", class: "input-box__image__file"}
+         %input{ type: "submit", class: "submit-btn", value: "Send"}
